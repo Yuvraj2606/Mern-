@@ -1,1 +1,150 @@
+question 1 : Write a JavaScript function that Print Sum of Even Place and Odd Place Digit
+
+function sum(){
+    var str = prompt("Enter a number");
+    var even = 0;
+    var odd = 0;
+    for(var i = 0; i < str.length; i++) {
+    if(i%2==0) {
+        odd+=parseInt(str[i]);
+    }
+    else {
+        even+=parseInt(str[i]);
+    }
+}
+console.log("Odd:", odd);
+console.log("Even:", even);
+}
+Output 
+sum();
+ Odd: 6
+ Even: 4
+undefined
+sum();
+ Odd: 4
+ Even: 6
+undefined
+
+
+question 2 :Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word into upper case.
+Example string : ‘learn javascript from brain mentors’
+Expected Output : ‘Learn Javascript From Brain Mentors
+
+function Uppercase(){
+    var str = 'learn javascript from brain mentors';
+    var arr = str.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+
+     }
+     var str2 = arr.join(" ");
+     console.log(str2);
+}
+output 
+Uppercase();
+Learn Javascript from Brain Mentor 
+
+OR 
+
+function Uppercase(){
+    var str = 'lEarn javascript FROM brain mentOrs';
+    str = srt.toLowerCase();
+    var arr = str.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+
+     }
+     var str2 = arr.join(" ");
+     console.log(str2);
+}
+Output
+Uppercase();
+Learn Javascript from Brain Mentor 
+
+
+question 3 : Write a JS Function to validate Phone Number 
+Only number and must be 10 digit long
+
+
+function isdigit(string) {
+        for (let i = 0; i < string.length; i++) {
+           var ascii = string.charCodeAt(i);
+           if (ascii < 48 || ascii > 57) {
+              return false;
+           }
+        }
+        return true;
+    }
+    var num = prompt("Enter a number");
+    if(isdigit(num) && num.length === 10) {
+        console.log(true);
+    }
+    else {
+        console.log(false);
+    }
+Output 
+isdigit();
+Enter a number 6396460331
+True 
+
+question 4 : Write a JS Function to validate Email Address
+Must contains @
+Must ends with .com/.org/.edu
+
+function email()
+{
+    var email = prompt("Enter your Mail ");
+    if(email.includes("@") && email.includes(".com"))
+    {
+        console.log("Valid Mail");
+    }
+    else
+    {
+        console.log("Invalid Mail");
+    }
+}
+output
+email();
+Enter your email 123@gmail.com 
+
+
+question 5 : Write a JS Function to find the occurrence of each character in JS
+Input : “brain mentors”
+O/P : b 1
+r 2
+A 1
+I 1
+N 2
+M 1
+E 1
+T 1
+O 1
+S 1
+
+
+function occurrence() {
+    var str = prompt("Enter the string");
+    obj = {};
+    for(let i in str) {
+        if(isNaN(obj[str[i]])) {
+            obj[str[i]] = 1;
+        }
+        else {
+            obj[str[i]]++;
+        }
+    }
+    console.log(obj);
+    for(let i in obj) {
+        console.log(i + ":", obj[i]);
+    }
+}
+
+output
+occurrence();
+{h: 1, e: 1, l: 2, o: 1}
+h : 1
+e : 1
+l : 2
+o : 1
+
 
