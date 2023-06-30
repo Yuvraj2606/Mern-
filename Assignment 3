@@ -1,0 +1,56 @@
+Question 1 :1.Write a function calculate that takes three arugments from the user, say num1 , num2, and operation(1==add, 2==subtract, 
+3==multiply, 4==divide ).Don`t use switch statement or if else statements
+ 
+1.add,
+2.subtract,
+3.multiply,
+4.divide 
+
+write the calc function for all the operations
+
+    var a = prompt("Enter the first number");
+    var b = prompt("Enter the second number");
+    var c = prompt("Enter the operation");
+
+    function calc(a, b, fn) {
+        return fn(a,b);
+    }
+
+
+    function add(a, b) {
+        return a+b;
+    }
+    function subtract(a, b) {
+        return a-b;
+    }
+    function multiply(a, b) {
+        return a*b;
+    }
+    function divide(a, b) {
+        return a/b;
+    }
+
+    var obj = {1 : add, 2 : subtract, 3 : multiply, 4 : divide};
+
+    console.log(calc(parseInt(a), parseInt(b), obj[c]));
+
+
+Question 2 : Create a function Named Triangle which takes 3 parameters, say A, B and C denoting the 3 sides of a triangle.
+Use Callback function, create a method to check if the triangle is Equilateral or not.
+Output:
+"true" if the triangle is equilateral and "false" if its not.
+
+function Triangle(A, B, C, callback) {
+  if (A === B && B === C) {
+    callback(true);
+  } else {
+    callback(false);
+  }
+}
+Triangle(5, 5, 5, function(isEquilateral) {
+  console.log(isEquilateral);
+});
+
+Triangle(5, 7, 5, function(isEquilateral) {
+  console.log(isEquilateral); 
+});
